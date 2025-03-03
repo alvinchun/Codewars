@@ -1,3 +1,4 @@
+//pow 가 아닌 숫자를 sqrt 하면 소수이며 1 나누어도 0이 아닌 소수다..
 function isSquare(n) {
     return Math.sqrt(n) % 1 === 0;
   }
