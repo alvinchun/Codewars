@@ -47,4 +47,24 @@ function accum(s) {
   }
 
 
-  console.log(highAndLow22("1 2 3 4 5")); // return "5 1"
+
+
+
+  function accum22(s) {
+    // your code
+    // console.log([...s]);
+
+    let a = s.toUpperCase().split('')
+    
+    for(let i=0 ; i<s.length ; i++){
+      a[i] += a[i].toLowerCase().repeat(i)    
+    }
+    
+    return a.join('-')
+  }
+
+
+  console.log(accum22("abcd")); // return "5 1"
+  console.log(accum22("RqaEzty")); // return "5 1"
+  console.log(accum22("cwAt")); // return "5 1"
+

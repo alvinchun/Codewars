@@ -2,16 +2,6 @@ function isIsogram(str){
 	return new Set(str.toUpperCase()).size == str.length;
 }
 
-function isIsogram(str){
-    var i, j;
-    str = str.toLowerCase();
-    for(i = 0; i < str.length; ++i)
-      for(j = i + 1; j < str.length; ++j)
-        if(str[i] === str[j])
-          return false;
-    return true;
-  }
-
   function isIsogram(str)  {
     // Downcase everything, split on letters.
     str_lc = str.toLowerCase();
@@ -58,5 +48,75 @@ function isIsogram(str){
     return result;
   }
 
+  function isIsogram(str){
+    var i, j;
+    str = str.toLowerCase();
+    for(i = 0; i < str.length; ++i){
+      for(j = i + 1; j < str.length; ++j){
+        if(str[i] === str[j]){
+          return false;
+        }
+      }
+    }
 
-  console.log(highAndLow22("1 2 3 4 5")); // return "5 1"
+    return true;
+  }
+
+  function isIsogram22(str){
+
+    let strInOrder = str.toLowerCase()
+
+    for(let i=0; i < strInOrder.length; i++){
+      for(let j=i+1 ; j<strInOrder.length; j++){
+        if(strInOrder[i] === strInOrder[j]){
+          return false
+        }
+      console.log(i);
+      console.log(j + "s");
+      }
+      // return true
+      // console.log(j + "a");
+
+    }
+    return true
+  }
+
+  
+  function isIsogram33(str){
+
+    let a = new Set(str.toLowerCase())
+    // console.log(a);
+    
+    return a.size === str.length 
+    
+  }
+
+  // isIsogram("Dermatoglyphics")
+// isIsogram("aba"); // return "5 1"
+// isIsogram("isogram"); // return "5 1"
+// isIsogram("moOse"); // return "5 1"
+// isIsogram("isIsogram"); // return "5 1"
+// isIsogram(""); // return "5 1"
+
+isIsogram22("abb")
+console.log(isIsogram22("abb"));
+
+
+
+// console.log(isIsogram22("Dermatoglyphics")); // return "5 1"
+// console.log(isIsogram22("isogram")); // return "5 1"
+// console.log(isIsogram22("aba")); // return "5 1"
+// console.log(isIsogram22("moOse")); // return "5 1"
+// console.log(isIsogram22("isIsogram")); // return "5 1"
+// console.log(isIsogram22("")); // return "5 1"
+
+
+// console.log(isIsogram33("Dermatoglyphics")); // return "5 1"
+// console.log(isIsogram33("isogram")); // return "5 1"
+// console.log(isIsogram33("aba")); // return "5 1"
+// console.log(isIsogram33("moOse")); // return "5 1"
+// console.log(isIsogram33("isIsogram")); // return "5 1"
+// console.log(isIsogram33("")); // return "5 1"
+// console.log(isIsogram33("aaaaaaaaa")); // return "5 1"
+
+
